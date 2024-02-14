@@ -17,12 +17,15 @@
     bottom: 0;
     left: 0;
     background: linear-gradient(rgba(10, 10, 10, 0.2), rgba(10, 10, 10, 0.8));
-    z-index: 1;
+    z-index: 1; /* Lower z-index for the overlay */
 }
 
-#huseerik{
-   font-family: "Protest Guerrilla", sans-serif;
+#huseerik {
+    font-family: "Protest Guerrilla", sans-serif;
+    position: relative; /* Ensure the button is positioned relative to this container */
+    z-index: 2; /* Higher z-index for the button */
 }
+
 
 #mainNav {
   font-family: "Vollkorn SC", serif;
@@ -34,4 +37,89 @@
   font-family: "Protest Revolution", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+#header2, #allskills, #allprojects, #footer {
+  font-family: "Philosopher", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#skills, #MyProjects {
+  font-family: "Rye", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.hover-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(173, 216, 230, 0.9);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hover-card:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-text {
+    font-size: 18px;
+}
+
+#allprojects{
+    background: url('./images/background.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/*@keyframes moveForward {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(200%);
+    }
+}
+
+.animated-image {
+    animation: moveForward 1s linear infinite;
+    animation-play-state: paused;
+}*/
+
+#developerRole {
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+    display: inline-block;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes blink-caret {
+    to {
+        border-color: transparent;
+    }
 }
