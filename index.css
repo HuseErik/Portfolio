@@ -20,7 +20,7 @@
     z-index: 1; /* Lower z-index for the overlay */
 }
 
-#huseerik {
+#huseerik, .huse {
     font-family: "Protest Guerrilla", sans-serif;
     position: relative; /* Ensure the button is positioned relative to this container */
     z-index: 2; /* Higher z-index for the button */
