@@ -4,21 +4,35 @@
     overflow: hidden;
 }
 
+/*top*/
+
 #mainPic {
-    background: url(./images/mainPic.jpg) center/cover no-repeat;
+    background: linear-gradient(rgba(10, 10, 10, 0.2), rgba(10, 10, 10, 0.8)), url(./images/mainPic.jpg) center/cover no-repeat;
     position: relative;
+    overflow: hidden; /* Hide the content initially */
 }
 
 #mainPic::before {
     content: "";
     position: absolute;
     top: 0;
-    right: 0;
-    bottom: 0;
     left: 0;
-    background: linear-gradient(rgba(10, 10, 10, 0.2), rgba(10, 10, 10, 0.8));
-    z-index: 1; /* Lower z-index for the overlay */
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(10, 10, 10, 0.2), rgba(10, 10, 10, 0.8)), url(./images/mainPic1.jpg); /* Set the shared image */
+    background-size: cover; /* Adjust as needed */
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
+
+#mainPic:hover::before {
+    opacity: 0;
+}
+
+
+
+/*top*/
 
 #huseerik, .huse {
     font-family: "Protest Guerrilla", sans-serif;
@@ -101,7 +115,7 @@
     width: 0;
   }
   to {
-    width: 50%;
+    width: 53%;
   }
 }
 
@@ -147,4 +161,19 @@
 .tools-title {
   text-transform: capitalize;
   font-family: 'Silkscreen', sans-serif;
+}
+
+.custom-link {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-link img {
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.custom-link:hover img {
+    transform: scale(1.9); /* Increase the size on hover */
+    filter: hue-rotate(45deg); /* Change the color on hover, adjust the degree as needed */
 }
