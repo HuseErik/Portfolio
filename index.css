@@ -45,7 +45,7 @@
   font-style: normal;
 }
 
-#skills, #MyProjects {
+#skills, #MyProjects, #Mytools {
   font-family: "Rye", serif;
   font-weight: 400;
   font-style: normal;
@@ -86,40 +86,65 @@
     background-size: cover;
 }
 
-/*@keyframes moveForward {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(200%);
-    }
-}
-
-.animated-image {
-    animation: moveForward 1s linear infinite;
-    animation-play-state: paused;
-}*/
-
+    
 #developerRole {
-    border-right: 2px solid white;
-    white-space: nowrap;
-    overflow: hidden;
-    margin: 0;
-    display: inline-block;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+  display: inline-block;
+  animation: typing 3s steps(22) forwards, blink-caret 0.5s step-end infinite alternate;
 }
 
 @keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 50%;
-    }
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
 }
 
 @keyframes blink-caret {
-    to {
-        border-color: transparent;
-    }
+  to {
+    border-color: transparent;
+  }
+}
+
+@keyframes deleting {
+  from {
+    width: 50%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.images {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.images-slide {
+  display: inline-block;
+  animation: 30s slide infinite linear;
+}
+
+.images-slide img {
+  margin: 10px 40px;
+}
+
+.tools-title {
+  text-transform: capitalize;
+  font-family: 'Silkscreen', sans-serif;
 }

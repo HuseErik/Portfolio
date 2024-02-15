@@ -1,22 +1,19 @@
-// For Typing and Deleting from Introduction
-document.addEventListener("DOMContentLoaded", function () {
-    const developerRoleElement = document.getElementById("developerRole");
+const developerRole = document.getElementById('developerRole');
 
-    const role = "Aspiring Developer";
-
-    typeAndDelete(developerRoleElement, role);
+// Add event listener to detect the end of typing and deleting animations
+developerRole.addEventListener('animationend', (event) => {
+  if (event.animationName === 'typing') {
+    // Start deleting animation
+    setTimeout(() => {
+    developerRole.style.animation = 'deleting 2s steps(22) forwards, blink-caret 0.5s step-end infinite alternate';
+    }, 3000);
+  } else if (event.animationName === 'deleting') {
+    // Wait for 1 second and then start typing animation
+    setTimeout(() => {
+      developerRole.style.animation = 'typing 3s steps(22) forwards, blink-caret 0.5s step-end infinite alternate';
+    }, 2000);
+  }
 });
-
-function typeAndDelete(element, text) {
-    setInterval(() => {
-        element.textContent = "";
-        element.style.animation = "none";
-        setTimeout(() => {
-            element.style.animation = "typing 2s steps(22), blink-caret 0.5s step-end infinite alternate";
-            element.textContent = text;
-        }, 100);
-    }, 4000);
-}
 
 // For changing Pic for About Me
 document.addEventListener("DOMContentLoaded", function () {
@@ -106,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }, 10); // interval for a smoother or faster animation
     }
-});
 
+});
 
 
