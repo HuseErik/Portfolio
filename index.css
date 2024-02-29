@@ -22,7 +22,7 @@
     background-image: linear-gradient(rgba(10, 10, 10, 0.2), rgba(10, 10, 10, 0.8)), url(./images/mainPic1.jpg); /* Set the shared image */
     background-size: cover; /* Adjust as needed */
     z-index: 2;
-    opacity: 1;
+    opacity: 1; /* Initially hidden */
     transition: opacity 0.5s ease-in-out;
 }
 
@@ -30,14 +30,32 @@
     opacity: 0;
 }
 
+@media (max-width: 767px) {
+    /* Apply the hover effect to small screens by default */
+    #mainPic::before {
+        opacity: 0;
+    }
+
+    #mainPic:hover::before {
+        opacity: 0;
+    }
+}
 
 
 /*top*/
+
+.navbar-nav a.nav-link:hover {
+    color: #17a2b8 !important; /* Set your desired hover text color */
+}
 
 #huseerik, .huse {
     font-family: "Protest Guerrilla", sans-serif;
     position: relative; /* Ensure the button is positioned relative to this container */
     z-index: 2; /* Higher z-index for the button */
+}
+
+#logo, #download-cv {
+    font-family: "Protest Guerrilla", sans-serif;
 }
 
 
@@ -53,7 +71,7 @@
   font-style: normal;
 }
 
-#header2, #allskills, #allprojects, #footer {
+#header2, #allskills, #allprojects, #footer, #contact-text, #follow-text {
   font-family: "Philosopher", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -177,3 +195,4 @@
     transform: scale(1.9); /* Increase the size on hover */
     filter: hue-rotate(45deg); /* Change the color on hover, adjust the degree as needed */
 }
+
