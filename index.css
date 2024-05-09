@@ -71,13 +71,13 @@
   font-style: normal;
 }
 
-#header2, #allskills, #allprojects, #footer, #contact-text, #follow-text {
+#header2, #allskills, #allprojects, #footer, #contact-text, #follow-text, #certificates {
   font-family: "Philosopher", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-#skills, #MyProjects, #Mytools {
+#skills, #MyProjects, #Mytools, #MyCertificates {
   font-family: "Rye", serif;
   font-weight: 400;
   font-style: normal;
