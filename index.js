@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // For Nav only Appear when scrolling up and Skills Animation
 document.addEventListener("DOMContentLoaded", function () {
-    const navBar = document.getElementById("mainNav");
+    /*const navBar = document.getElementById("mainNav");
     let prevScrollPos = window.pageYOffset;
 
     // Update the navigation bar visibility on scroll
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         prevScrollPos = currentScrollPos;
-    });
+    });*/
 
     const skillSections = document.querySelectorAll(".skill-progress");
 
